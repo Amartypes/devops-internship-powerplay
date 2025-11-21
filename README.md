@@ -4,6 +4,8 @@ This repository contains my completed DevOps Internship Assignment completed on 
 
 ## Part 1 – Environment Setup
 
+![Part 1 Setup](https://raw.githubusercontent.com/Amartypes/devops-internship-powerplay/main/screenshots/part1_setup.png)
+
 - Created user `devops_intern`, granted passwordless sudo, changed hostname.
 - Verified with:
   ```
