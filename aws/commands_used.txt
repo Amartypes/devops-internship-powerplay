@@ -1,0 +1,20 @@
+aws logs create-log-group --log-group-name /devops/intern-metrics --region eu-north-1
+aws logs create-log-stream --log-group-name /devops/intern-metrics --log-stream-name ec2-system-report --region eu-north-1
+
+TIMESTAMP_MS=$(($(date +%s) * 1000))
+LOG_LINE=$(grep -v '^$' /var/log/system_report.log | tail -n 1)
+
+cat <<EOF > log.json
+[
+  {
+    "timestamp": $TIMESTAMP_MS,
+    "message": "$LOG_LINE"
+  }
+]
+EOF
+
+aws logs put-log-events \
+  --log-group-name /devops/intern-metrics \
+  --log-stream-name ec2-system-report \
+  --log-events file://log.json \
+  --region eu-north-1
