@@ -3,7 +3,7 @@
 This repository contains my completed DevOps Internship Assignment completed on an Ubuntu EC2 instance in AWS (region: eu-north-1).
 
 ## Part 1 – Environment Setup
-(screenshots/part1_setup.png)
+
 - Created user `devops_intern`, granted passwordless sudo, changed hostname.
 - Verified with:
   ```
