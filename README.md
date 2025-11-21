@@ -15,9 +15,19 @@ This repository contains my completed DevOps Internship Assignment completed on 
   ```
 
 ## Part 2 – Web Service
+
+![Part 2 Webpage](https://raw.githubusercontent.com/Amartypes/devops-internship-powerplay/main/screenshots/part2_webpage.png)
+
 - Installed Nginx, fetched instance metadata via IMDSv2, created custom index.html.
 
 ## Part 3 – Monitoring Script & Cron
+
+![Part 3 Cron](https://raw.githubusercontent.com/Amartypes/devops-internship-powerplay/main/screenshots/part3_cron.png)
+
+![Part 3 Log 1](https://raw.githubusercontent.com/Amartypes/devops-internship-powerplay/main/screenshots/part3_log1.png.png)
+
+![Part 3 Log 2](https://raw.githubusercontent.com/Amartypes/devops-internship-powerplay/main/screenshots/part3_log2.png.png)
+
 Script: `/usr/local/bin/system_report.sh`
 Cron:
 ```
@@ -25,11 +35,15 @@ Cron:
 ```
 
 ## Part 4 – CloudWatch Integration
+
+![AWS CLI](https://raw.githubusercontent.com/Amartypes/devops-internship-powerplay/main/screenshots/part4_awscli.png)
+
 AWS CLI commands used:
 ```
 aws logs create-log-group --log-group-name /devops/intern-metrics --region eu-north-1
 aws logs create-log-stream --log-group-name /devops/intern-metrics --log-stream-name ec2-system-report --region eu-north-1
 ```
+![CloudWatch Logs](https://raw.githubusercontent.com/Amartypes/devops-internship-powerplay/main/screenshots/part4_cloudwatchlogs.png)
 
 Payload creation:
 ```
